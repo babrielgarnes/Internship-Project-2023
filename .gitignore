@@ -22,3 +22,6 @@ games/migrations/__pycache__/0002_game_desc_alter_game_owner.cpython-312.pyc
 games/migrations/__pycache__/0003_user.cpython-312.pyc
 games/migrations/__pycache__/0004_delete_user.cpython-312.pyc
 games/__pycache__/forms.cpython-312.pyc
+games/__pycache__/views.cpython-312.pyc
+games/__pycache__/views.cpython-312.pyc
+games/__pycache__/views.cpython-312.pyc
