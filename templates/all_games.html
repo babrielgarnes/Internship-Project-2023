@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block title %}
+    All Games list
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+            <label for="sortgames">Sort by:</label>
+            <select name="sortgames" id="sortgames" onchange="window.location.href=this.value;">
+                <option value="/games/abc">Alphabetically</option>
+                <option value="/games/short">Shortest</option>
+                <option value="/games/long">Longest</option>
+                <option value="/games/least">Least Players</option>
+                <option value="/games/most">Most Players</option>
+                <option value="/games/owner">Owner</option>
+            </select>
+            <h1>Games</h1>
+        {% for game in mygames %}
+            <div class="game">
+                <h2><a href="/games/details/{{game.id}}">{{ game.name }}</a></h2>
+                <p>{{ game.desc }}</p>
+                <table class="deets">
+                    <tr><th>Time:</th><th>Max players:</th><th>Owner:</th></tr>
+                    <tr><td>{{ game.time }}</td><td>{{ game.max_players }}</td><td>{{ game.owner }}</td></tr>
+                </table>
+            </div>
+        {% empty %}
+        <p>No items available.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

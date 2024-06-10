@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+ <link rel="stylesheet" href="{% static 'master.css' %}">
+ <link rel="stylesheet" href="{% static 'gamelist.css' %}">
+ <link rel="stylesheet" href="{% static 'mainpage.css' %}">
+ <link rel="stylesheet" href="{% static 'login.css' %}">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <div class="navbar">
+        <label for="menu-toggle" class="menu-button">Menu</label>
+        <div class="menu">
+            <div class="navbar-links">
+                <a href="/">Home</a>
+                <a href="/games">All Games</a>
+                <a href="/accounts/login">Login/Add Game</a>
+                <a href="/about">About/Contact</a>
+                
+            </div>
+        </div>
+    </div>
+{% block content %}
+{% endblock %}
+<div class="buffer">
+</div>
+</body>
+<div class="footer">
+  <p>&copy; 2023 Gabriel Barnes. All rights reserved.</p>
+</div>
+</html>

@@ -1,0 +1,33 @@
+        .acontainer {
+            display: flex;
+            width: 80%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .image-container {
+
+            overflow: hidden;
+            border-right: 1px solid #ccc;
+        }
+
+        .info-container {
+            flex: 2;
+            padding: 20px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0;
+        }

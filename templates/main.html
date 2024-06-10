@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+    Cru Board Game Club
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the CBGC Website!</h1>
+    <h5>Use the menu button above to navigate the site.</h5>
+    <h2>New to the club? Start <a href="/about">here!</a></h2>
+    <h2>Here's a real, not-from-google-images picture of some of the games we play:</h2>
+    <img src="{% static 'spread.jpg' %}">
+    <h2>Wanna see more? <a href="/games">Take a look!</a></h2>
+{% endblock %}

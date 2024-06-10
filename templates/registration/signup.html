@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  <h1>Sign up</h1>
+  <p>Already have an account? <a href="/accounts/login">Login</a></p>
+  <div class="container">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+  </form>
+  </div>
+  <p><strong>Why sign up?</strong></p>
+  <ul>
+    <li>Add your games to the site!</li>
+    <li>Give your favorite games a Like! (coming soon)</li>
+    <li>Are you an officer? Talk to Gabe for officer privileges.</li>
+  </ul>
+{% endblock %}

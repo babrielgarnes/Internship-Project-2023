@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %} 
+    {{mygame.name}}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{mygame.name}}</h1>
+
+        <p>Playtime: {{mygame.time}} min</p>
+        <p>Max players: {{mygame.max_players}}</p>
+        <p>Owner: {{mygame.owner}}</p>
+        <p>Description: <br/>
+            {{mygame.desc}}
+        </p>
+
+        <p></p>BGG Link: <a href="https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q={{mygame.name}}">https://boardgamegeek.com/geeksearch.php?action=search&objecttype=boardgame&q={{mygame.name}}</a></p>
+    </div>
+    <p>Back to <a href="/games">Games</a></p>
+{% endblock %}
