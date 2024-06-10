@@ -91,6 +91,7 @@ def mostplayers(request):
 
 def profile(request):
     myinfo = User.get_user(request)
+    print(myinfo)
     template = loader.get_template('profile.html')
     context = {
         'myinfo' : myinfo

@@ -133,5 +133,5 @@ LOGIN_REDIRECT_URL = "login"
 LOGOUT_REDIRECT_URL = "main"
 
 SESSION_ENGINE = "django.contrib.sessions.backends.db"
-SESSION_COOKIE_SECURE = True  # Use 'True' if your site is served over HTTPS
+SESSION_COOKIE_SECURE = False  # Use 'True' if your site is served over HTTPS
 SESSION_COOKIE_AGE = 1209600
