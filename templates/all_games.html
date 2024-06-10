@@ -8,6 +8,7 @@
     <div class="container">
             <label for="sortgames">Sort by:</label>
             <select name="sortgames" id="sortgames" onchange="window.location.href=this.value;">
+                <option value="" selected disabled hidden>{{ view }}</option>
                 <option value="/games/abc">Alphabetically</option>
                 <option value="/games/short">Shortest</option>
                 <option value="/games/long">Longest</option>
