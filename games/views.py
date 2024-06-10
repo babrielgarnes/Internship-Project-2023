@@ -19,6 +19,7 @@ def games(request):
     template = loader.get_template('all_games.html')
     context = {
         'mygames': mygames,
+        'view' : "Choose here"
     }
     return HttpResponse(template.render(context, request))
 
@@ -35,18 +36,20 @@ def main(request):
     return HttpResponse(template.render())
 
 def alphabetically(request):
-    mygames = Game.objects.order_by('name').values()
+    mygames = Game.objects.order_by('name')
     template = loader.get_template('all_games.html')
     context = {
         'mygames': mygames,
+        'view' : "Alphabetically"
     }
     return HttpResponse(template.render(context, request))
 
 def shortest(request):
-    mygames = Game.objects.order_by('time').values()
+    mygames = Game.objects.order_by('time')
     template = loader.get_template('all_games.html')
     context = {
         'mygames': mygames,
+        'view' : "Shortest"
     }
     return HttpResponse(template.render(context, request))
 
@@ -55,6 +58,7 @@ def longest(request):
     template = loader.get_template('all_games.html')
     context = {
         'mygames': mygames,
+        'view' : "Longest"
     }
     return HttpResponse(template.render(context, request))
 
@@ -63,6 +67,7 @@ def owner(request):
     template = loader.get_template('all_games.html')
     context = {
         'mygames': mygames,
+        'view' : "Owner"
     }
     return HttpResponse(template.render(context, request))
 
@@ -71,6 +76,7 @@ def leastplayers(request):
     template = loader.get_template('all_games.html')
     context = {
         'mygames': mygames,
+        'view' : "Least Players"
     }
     return HttpResponse(template.render(context, request))
 
@@ -79,6 +85,7 @@ def mostplayers(request):
     template = loader.get_template('all_games.html')
     context = {
         'mygames': mygames,
+        'view' : "Most Players"
     }
     return HttpResponse(template.render(context, request))
 
